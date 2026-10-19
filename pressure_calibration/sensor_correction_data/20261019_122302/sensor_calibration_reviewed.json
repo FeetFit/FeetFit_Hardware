@@ -1,0 +1,382 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-19T12:30:17.388311+09:00",
+  "hardware_signature": {
+    "left_en_gpio": 17,
+    "right_en_gpio": 27,
+    "left_ads_channel": 0,
+    "right_ads_channel": 1,
+    "ads_gain": 1,
+    "ads_data_rate": 860,
+    "first_channel": 0,
+    "last_channel": 11,
+    "channel_count_per_foot": 12,
+    "median_window": 5,
+    "valid_reads": 10,
+    "mux_select_pins": [
+      22,
+      23,
+      24,
+      25
+    ],
+    "active_low": true,
+    "fixed_resistor_ohms": 47000
+  },
+  "repeat_count": 10,
+  "relative_spread_tolerance": 0.25,
+  "mapping_check": {},
+  "feet": {
+    "left": {
+      "baseline": [
+        16.4,
+        10.9,
+        44.0,
+        23.4,
+        23.6,
+        27.85,
+        17.75,
+        15.7,
+        5.95,
+        4.6,
+        15.35,
+        26.05
+      ],
+      "reference_1kg": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        5553.48,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "reference_2kg": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        10035.55,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "validated": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "spread_1kg": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        0.7208,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "spread_2kg": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        0.3643,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "right": {
+      "baseline": [
+        45.8,
+        23.8,
+        12.4,
+        18.65,
+        25.6,
+        10.95,
+        19.0,
+        21.55,
+        13.5,
+        14.15,
+        17.5,
+        80.35
+      ],
+      "reference_1kg": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "reference_2kg": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "validated": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "spread_1kg": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "spread_2kg": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  "trials": [
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 1,
+      "weight_kg": 1,
+      "adc": 7339.1
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 1,
+      "weight_kg": 2,
+      "adc": 7397.55
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 2,
+      "weight_kg": 1,
+      "adc": 7236.3
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 2,
+      "weight_kg": 2,
+      "adc": 10056.15
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 3,
+      "weight_kg": 1,
+      "adc": 5138.2
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 3,
+      "weight_kg": 2,
+      "adc": 10014.95
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 4,
+      "weight_kg": 1,
+      "adc": 8048.65
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 4,
+      "weight_kg": 2,
+      "adc": 10378.5
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 5,
+      "weight_kg": 1,
+      "adc": 5834.8
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 5,
+      "weight_kg": 2,
+      "adc": 10194.75
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 6,
+      "weight_kg": 1,
+      "adc": 5806.95
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 6,
+      "weight_kg": 2,
+      "adc": 7847.4
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 7,
+      "weight_kg": 1,
+      "adc": 5292.8
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 7,
+      "weight_kg": 2,
+      "adc": 6732.95
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 8,
+      "weight_kg": 1,
+      "adc": 4592.65
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 8,
+      "weight_kg": 2,
+      "adc": 10144.0
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 9,
+      "weight_kg": 1,
+      "adc": 4065.95
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 9,
+      "weight_kg": 2,
+      "adc": 9126.25
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 10,
+      "weight_kg": 1,
+      "adc": 5300.0
+    },
+    {
+      "foot": "left",
+      "channel": 5,
+      "placement": 10,
+      "weight_kg": 2,
+      "adc": 10106.85
+    }
+  ],
+  "quality_review": {
+    "left_C05": {
+      "one_kg": {
+        "count": 10,
+        "median_adc": 5553.48,
+        "median_minus_baseline_adc": 5525.62,
+        "inliers": 6,
+        "inlier_fraction": 0.6,
+        "range_spread": 0.7208,
+        "band_fraction": 0.2,
+        "minimum_fraction": 0.9,
+        "minimum_repeats": 10,
+        "passed_session_repeatability": false
+      },
+      "two_kg": {
+        "count": 10,
+        "median_adc": 10035.55,
+        "median_minus_baseline_adc": 10007.7,
+        "inliers": 7,
+        "inlier_fraction": 0.7,
+        "range_spread": 0.3643,
+        "band_fraction": 0.2,
+        "minimum_fraction": 0.9,
+        "minimum_repeats": 10,
+        "passed_session_repeatability": false
+      },
+      "monotonic_0_1_2kg": true,
+      "candidate": false,
+      "caution": "Within-session candidate only; no cross-session accuracy validation"
+    }
+  },
+  "validation_method": "within_session_median_band_candidate",
+  "review_settings": {
+    "band_fraction": 0.2,
+    "minimum_fraction": 0.9,
+    "minimum_repeats": 10
+  },
+  "reviewed_at": "2026-10-19T12:32:47.937882+09:00"
+}

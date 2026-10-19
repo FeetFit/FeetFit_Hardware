@@ -1,0 +1,381 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-19T09:35:03.837501+09:00",
+  "hardware_signature": {
+    "left_en_gpio": 17,
+    "right_en_gpio": 27,
+    "left_ads_channel": 0,
+    "right_ads_channel": 1,
+    "ads_gain": 1,
+    "ads_data_rate": 860,
+    "first_channel": 0,
+    "last_channel": 11,
+    "channel_count_per_foot": 12,
+    "median_window": 5,
+    "valid_reads": 10,
+    "mux_select_pins": [
+      22,
+      23,
+      24,
+      25
+    ],
+    "active_low": true,
+    "fixed_resistor_ohms": 47000
+  },
+  "repeat_count": 10,
+  "relative_spread_tolerance": 0.25,
+  "mapping_check": {},
+  "feet": {
+    "left": {
+      "baseline": [
+        13.75,
+        13.8,
+        61.0,
+        21.75,
+        7.85,
+        12.85,
+        6.1,
+        15.0,
+        11.7,
+        3.85,
+        20.1,
+        29.45
+      ],
+      "reference_1kg": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "reference_2kg": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "validated": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "spread_1kg": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "spread_2kg": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "right": {
+      "baseline": [
+        22.6,
+        11.75,
+        23.45,
+        1.95,
+        13.8,
+        19.3,
+        6.65,
+        27.75,
+        27.2,
+        15.2,
+        0.3,
+        4.3
+      ],
+      "reference_1kg": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        3085.57,
+        null,
+        null
+      ],
+      "reference_2kg": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        3618.43,
+        null,
+        null
+      ],
+      "validated": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "spread_1kg": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0.8494,
+        null,
+        null
+      ],
+      "spread_2kg": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1.1521,
+        null,
+        null
+      ]
+    }
+  },
+  "trials": [
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 1,
+      "weight_kg": 1,
+      "adc": 2952.4
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 1,
+      "weight_kg": 2,
+      "adc": 4124.2
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 2,
+      "weight_kg": 1,
+      "adc": 3063.75
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 2,
+      "weight_kg": 2,
+      "adc": 3302.8
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 3,
+      "weight_kg": 1,
+      "adc": 1065.8
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 3,
+      "weight_kg": 2,
+      "adc": 1385.9
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 4,
+      "weight_kg": 1,
+      "adc": 3345.8
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 4,
+      "weight_kg": 2,
+      "adc": 3742.05
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 5,
+      "weight_kg": 1,
+      "adc": 1998.05
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 5,
+      "weight_kg": 2,
+      "adc": 5537.15
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 6,
+      "weight_kg": 1,
+      "adc": 3107.4
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 6,
+      "weight_kg": 2,
+      "adc": 3293.35
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 7,
+      "weight_kg": 1,
+      "adc": 3139.45
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 7,
+      "weight_kg": 2,
+      "adc": 3683.7
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 8,
+      "weight_kg": 1,
+      "adc": 2752.7
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 8,
+      "weight_kg": 2,
+      "adc": 3656.5
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 9,
+      "weight_kg": 1,
+      "adc": 3253.05
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 9,
+      "weight_kg": 2,
+      "adc": 3580.35
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 10,
+      "weight_kg": 1,
+      "adc": 3673.8
+    },
+    {
+      "foot": "right",
+      "channel": 9,
+      "placement": 10,
+      "weight_kg": 2,
+      "adc": 3558.75
+    }
+  ],
+  "quality_review": {
+    "right_C09": {
+      "one_kg": {
+        "count": 10,
+        "median_adc": 3085.57,
+        "median_minus_baseline_adc": 3070.38,
+        "inliers": 8,
+        "inlier_fraction": 0.8,
+        "range_spread": 0.8494,
+        "band_fraction": 0.2,
+        "minimum_fraction": 0.9,
+        "minimum_repeats": 10,
+        "passed_session_repeatability": false
+      },
+      "two_kg": {
+        "count": 10,
+        "median_adc": 3618.43,
+        "median_minus_baseline_adc": 3603.23,
+        "inliers": 8,
+        "inlier_fraction": 0.8,
+        "range_spread": 1.1521,
+        "band_fraction": 0.2,
+        "minimum_fraction": 0.9,
+        "minimum_repeats": 10,
+        "passed_session_repeatability": false
+      },
+      "monotonic_0_1_2kg": true,
+      "candidate": false,
+      "caution": "Within-session candidate only; no cross-session accuracy validation"
+    }
+  },
+  "validation_method": "within_session_candidate_not_production_validated",
+  "review_settings": {
+    "median_band": 0.2,
+    "min_inlier_fraction": 0.9,
+    "candidate_min_repeats": 10
+  }
+}

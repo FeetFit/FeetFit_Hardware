@@ -1,0 +1,980 @@
+{
+  "schema_version": 1,
+  "hardware_signature": {
+    "left_en_gpio": 17,
+    "right_en_gpio": 27,
+    "left_ads_channel": 0,
+    "right_ads_channel": 1,
+    "ads_gain": 1,
+    "ads_data_rate": 860,
+    "first_channel": 0,
+    "last_channel": 11,
+    "channel_count_per_foot": 12,
+    "median_window": 5,
+    "valid_reads": 10,
+    "mux_select_pins": [
+      22,
+      23,
+      24,
+      25
+    ],
+    "active_low": true,
+    "fixed_resistor_ohms": 47000
+  },
+  "usage": "Offline sensor candidates only. NOT a production calibration profile.",
+  "sensors": {
+    "right_C01": {
+      "baseline_adc_at_capture": 15.1,
+      "reference_1kg_adc": 3670.0,
+      "reference_2kg_adc": 6502.98,
+      "delta_1kg_adc": 3654.9,
+      "delta_2kg_adc": 6487.88,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 3670.0,
+          "median_minus_baseline_adc": 3654.9,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.3685,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 6502.98,
+          "median_minus_baseline_adc": 6487.88,
+          "inliers": 9,
+          "inlier_fraction": 0.9,
+          "range_spread": 0.4094,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": true,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_015640/sensor_calibration_reviewed.json",
+      "status": "within_session_candidate",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established"
+    },
+    "right_C00": {
+      "baseline_adc_at_capture": 14.45,
+      "reference_1kg_adc": 9554.65,
+      "reference_2kg_adc": 11173.22,
+      "delta_1kg_adc": 9540.2,
+      "delta_2kg_adc": 11158.77,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 9554.65,
+          "median_minus_baseline_adc": 9540.2,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.2414,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 11173.22,
+          "median_minus_baseline_adc": 11158.77,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.1478,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": true,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_023847/sensor_calibration_reviewed.json",
+      "status": "within_session_candidate",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established"
+    },
+    "right_C02": {
+      "baseline_adc_at_capture": 16.85,
+      "reference_1kg_adc": 2500.3,
+      "reference_2kg_adc": 6029.6,
+      "delta_1kg_adc": 2483.45,
+      "delta_2kg_adc": 6012.75,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 2500.3,
+          "median_minus_baseline_adc": 2483.45,
+          "inliers": 5,
+          "inlier_fraction": 0.5,
+          "range_spread": 1.0627,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": false
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 6029.6,
+          "median_minus_baseline_adc": 6012.75,
+          "inliers": 9,
+          "inlier_fraction": 0.9,
+          "range_spread": 0.5952,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": false,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_032014/sensor_calibration_reviewed.json",
+      "status": "manual_override_unvalidated",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established",
+      "manual_override": {
+        "reason": "user_selected_provisional_0_1_2kg",
+        "included_at": "2026-10-19T03:39:41.305594+09:00",
+        "within_session_review_passed": false
+      }
+    },
+    "right_C03": {
+      "baseline_adc_at_capture": 22.0,
+      "reference_1kg_adc": 1921.03,
+      "reference_2kg_adc": 5252.8,
+      "delta_1kg_adc": 1899.03,
+      "delta_2kg_adc": 5230.8,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 1921.03,
+          "median_minus_baseline_adc": 1899.03,
+          "inliers": 7,
+          "inlier_fraction": 0.7,
+          "range_spread": 2.2914,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": false
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 5252.8,
+          "median_minus_baseline_adc": 5230.8,
+          "inliers": 4,
+          "inlier_fraction": 0.4,
+          "range_spread": 1.0207,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": false
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": false,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_065450/sensor_calibration_reviewed.json",
+      "status": "manual_override_unvalidated",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established",
+      "manual_override": {
+        "reason": "provisional_low_repeatability_0_1_2kg",
+        "included_at": "2026-10-19T07:02:23.256517+09:00",
+        "within_session_review_passed": false
+      }
+    },
+    "right_C04": {
+      "baseline_adc_at_capture": 20.45,
+      "reference_1kg_adc": 5588.3,
+      "reference_2kg_adc": 8708.75,
+      "delta_1kg_adc": 5567.85,
+      "delta_2kg_adc": 8688.3,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 5588.3,
+          "median_minus_baseline_adc": 5567.85,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.2034,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 8708.75,
+          "median_minus_baseline_adc": 8688.3,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.269,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": true,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_070450/sensor_calibration_reviewed.json",
+      "status": "within_session_candidate",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established"
+    },
+    "right_C05": {
+      "baseline_adc_at_capture": 11.45,
+      "reference_1kg_adc": 3799.95,
+      "reference_2kg_adc": 5738.62,
+      "delta_1kg_adc": 3788.5,
+      "delta_2kg_adc": 5727.17,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 3799.95,
+          "median_minus_baseline_adc": 3788.5,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.1887,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 5738.62,
+          "median_minus_baseline_adc": 5727.18,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.0776,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": true,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_071849/sensor_calibration_reviewed.json",
+      "status": "within_session_candidate",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established"
+    },
+    "right_C06": {
+      "baseline_adc_at_capture": 14.4,
+      "reference_1kg_adc": 1796.78,
+      "reference_2kg_adc": 2925.73,
+      "delta_1kg_adc": 1782.38,
+      "delta_2kg_adc": 2911.33,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 1796.78,
+          "median_minus_baseline_adc": 1782.38,
+          "inliers": 4,
+          "inlier_fraction": 0.4,
+          "range_spread": 1.275,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": false
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 2925.73,
+          "median_minus_baseline_adc": 2911.33,
+          "inliers": 5,
+          "inlier_fraction": 0.5,
+          "range_spread": 0.6807,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": false
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": false,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_073748/sensor_calibration_reviewed.json",
+      "status": "manual_override_unvalidated",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established",
+      "manual_override": {
+        "reason": "provisional_low_repeatability_0_1_2kg",
+        "included_at": "2026-10-19T07:49:39.164797+09:00",
+        "within_session_review_passed": false
+      }
+    },
+    "right_C08": {
+      "baseline_adc_at_capture": 13.15,
+      "reference_1kg_adc": 6074.12,
+      "reference_2kg_adc": 10262.83,
+      "delta_1kg_adc": 6060.97,
+      "delta_2kg_adc": 10249.68,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 6074.12,
+          "median_minus_baseline_adc": 6060.98,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.2645,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 10262.83,
+          "median_minus_baseline_adc": 10249.68,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.1456,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": true,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_090027/sensor_calibration_reviewed.json",
+      "status": "within_session_candidate",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established"
+    },
+    "right_C09": {
+      "baseline_adc_at_capture": 15.2,
+      "reference_1kg_adc": 3085.57,
+      "reference_2kg_adc": 3618.43,
+      "delta_1kg_adc": 3070.37,
+      "delta_2kg_adc": 3603.23,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 3085.57,
+          "median_minus_baseline_adc": 3070.38,
+          "inliers": 8,
+          "inlier_fraction": 0.8,
+          "range_spread": 0.8494,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": false
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 3618.43,
+          "median_minus_baseline_adc": 3603.23,
+          "inliers": 8,
+          "inlier_fraction": 0.8,
+          "range_spread": 1.1521,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": false
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": false,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_092909/sensor_calibration_reviewed.json",
+      "status": "manual_override_unvalidated",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established",
+      "manual_override": {
+        "reason": "provisional_low_repeatability_0_1_2kg",
+        "included_at": "2026-10-19T09:38:05.010889+09:00",
+        "within_session_review_passed": false
+      }
+    },
+    "right_C10": {
+      "baseline_adc_at_capture": 6.85,
+      "reference_1kg_adc": 5475.4,
+      "reference_2kg_adc": 7449.98,
+      "delta_1kg_adc": 5468.55,
+      "delta_2kg_adc": 7443.13,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 5475.4,
+          "median_minus_baseline_adc": 5468.55,
+          "inliers": 9,
+          "inlier_fraction": 0.9,
+          "range_spread": 0.3576,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 7449.98,
+          "median_minus_baseline_adc": 7443.12,
+          "inliers": 8,
+          "inlier_fraction": 0.8,
+          "range_spread": 0.4138,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": false
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": false,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_094255/sensor_calibration_reviewed.json",
+      "status": "manual_override_unvalidated",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established",
+      "manual_override": {
+        "reason": "provisional_low_repeatability_0_1_2kg",
+        "included_at": "2026-10-19T09:53:35.081018+09:00",
+        "within_session_review_passed": false
+      }
+    },
+    "right_C11": {
+      "baseline_adc_at_capture": 20.7,
+      "reference_1kg_adc": 1738.78,
+      "reference_2kg_adc": 6826.68,
+      "delta_1kg_adc": 1718.08,
+      "delta_2kg_adc": 6805.98,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 1738.78,
+          "median_minus_baseline_adc": 1718.08,
+          "inliers": 6,
+          "inlier_fraction": 0.6,
+          "range_spread": 1.353,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": false
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 6826.68,
+          "median_minus_baseline_adc": 6805.98,
+          "inliers": 6,
+          "inlier_fraction": 0.6,
+          "range_spread": 0.8804,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": false
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": false,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_101826/sensor_calibration_reviewed.json",
+      "status": "manual_override_unvalidated",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established",
+      "manual_override": {
+        "reason": "provisional_low_repeatability_0_1_2kg",
+        "included_at": "2026-10-19T10:28:25.180274+09:00",
+        "within_session_review_passed": false
+      }
+    },
+    "left_C00": {
+      "baseline_adc_at_capture": 13.0,
+      "reference_1kg_adc": 6021.02,
+      "reference_2kg_adc": 9015.73,
+      "delta_1kg_adc": 6008.02,
+      "delta_2kg_adc": 9002.73,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 6021.02,
+          "median_minus_baseline_adc": 6008.02,
+          "inliers": 9,
+          "inlier_fraction": 0.9,
+          "range_spread": 0.5191,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 9015.73,
+          "median_minus_baseline_adc": 9002.73,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.2895,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": true,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_104106/sensor_calibration_reviewed.json",
+      "status": "within_session_candidate",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established"
+    },
+    "left_C02": {
+      "baseline_adc_at_capture": 38.25,
+      "reference_1kg_adc": 9788.48,
+      "reference_2kg_adc": 12929.42,
+      "delta_1kg_adc": 9750.23,
+      "delta_2kg_adc": 12891.17,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 9788.48,
+          "median_minus_baseline_adc": 9750.23,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.0705,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 12929.42,
+          "median_minus_baseline_adc": 12891.17,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.0355,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": true,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_112828/sensor_calibration_reviewed.json",
+      "status": "within_session_candidate",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established"
+    },
+    "left_C03": {
+      "baseline_adc_at_capture": 21.55,
+      "reference_1kg_adc": 7794.32,
+      "reference_2kg_adc": 9290.35,
+      "delta_1kg_adc": 7772.77,
+      "delta_2kg_adc": 9268.8,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 7794.32,
+          "median_minus_baseline_adc": 7772.77,
+          "inliers": 9,
+          "inlier_fraction": 0.9,
+          "range_spread": 0.323,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 9290.35,
+          "median_minus_baseline_adc": 9268.8,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.1884,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": true,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_114820/sensor_calibration_reviewed.json",
+      "status": "within_session_candidate",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established"
+    },
+    "left_C04": {
+      "baseline_adc_at_capture": 7.4,
+      "reference_1kg_adc": 5177.38,
+      "reference_2kg_adc": 9968.65,
+      "delta_1kg_adc": 5169.98,
+      "delta_2kg_adc": 9961.25,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 5177.38,
+          "median_minus_baseline_adc": 5169.98,
+          "inliers": 9,
+          "inlier_fraction": 0.9,
+          "range_spread": 0.3518,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 9968.65,
+          "median_minus_baseline_adc": 9961.25,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.2565,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": true,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_120408/sensor_calibration_reviewed.json",
+      "status": "within_session_candidate",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established"
+    },
+    "left_C05": {
+      "baseline_adc_at_capture": 27.85,
+      "reference_1kg_adc": 5553.48,
+      "reference_2kg_adc": 10035.55,
+      "delta_1kg_adc": 5525.63,
+      "delta_2kg_adc": 10007.7,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 5553.48,
+          "median_minus_baseline_adc": 5525.62,
+          "inliers": 6,
+          "inlier_fraction": 0.6,
+          "range_spread": 0.7208,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": false
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 10035.55,
+          "median_minus_baseline_adc": 10007.7,
+          "inliers": 7,
+          "inlier_fraction": 0.7,
+          "range_spread": 0.3643,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": false
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": false,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_122302/sensor_calibration_reviewed.json",
+      "status": "manual_override_unvalidated",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established",
+      "manual_override": {
+        "reason": "provisional_low_repeatability_0_1_2kg",
+        "included_at": "2026-10-19T12:32:55.026416+09:00",
+        "within_session_review_passed": false
+      }
+    },
+    "left_C06": {
+      "baseline_adc_at_capture": 12.9,
+      "reference_1kg_adc": 2464.3,
+      "reference_2kg_adc": 7347.15,
+      "delta_1kg_adc": 2451.4,
+      "delta_2kg_adc": 7334.25,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 2464.3,
+          "median_minus_baseline_adc": 2451.4,
+          "inliers": 5,
+          "inlier_fraction": 0.5,
+          "range_spread": 0.7664,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": false
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 7347.15,
+          "median_minus_baseline_adc": 7334.25,
+          "inliers": 9,
+          "inlier_fraction": 0.9,
+          "range_spread": 0.378,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": false,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_124040/sensor_calibration_reviewed.json",
+      "status": "manual_override_unvalidated",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established",
+      "manual_override": {
+        "reason": "provisional_low_repeatability_0_1_2kg",
+        "included_at": "2026-10-19T12:51:28.335928+09:00",
+        "within_session_review_passed": false
+      }
+    },
+    "left_C07": {
+      "baseline_adc_at_capture": 21.2,
+      "reference_1kg_adc": 8810.62,
+      "reference_2kg_adc": 11186.5,
+      "delta_1kg_adc": 8789.42,
+      "delta_2kg_adc": 11165.3,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 8810.62,
+          "median_minus_baseline_adc": 8789.42,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.1604,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 11186.5,
+          "median_minus_baseline_adc": 11165.3,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.1172,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": true,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_125505/sensor_calibration_reviewed.json",
+      "status": "within_session_candidate",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established"
+    },
+    "left_C08": {
+      "baseline_adc_at_capture": 23.3,
+      "reference_1kg_adc": 5063.23,
+      "reference_2kg_adc": 7961.43,
+      "delta_1kg_adc": 5039.93,
+      "delta_2kg_adc": 7938.13,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 5063.23,
+          "median_minus_baseline_adc": 5039.93,
+          "inliers": 4,
+          "inlier_fraction": 0.4,
+          "range_spread": 0.8914,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": false
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 7961.43,
+          "median_minus_baseline_adc": 7938.12,
+          "inliers": 9,
+          "inlier_fraction": 0.9,
+          "range_spread": 0.4136,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": false,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_130813/sensor_calibration_reviewed.json",
+      "status": "manual_override_unvalidated",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established",
+      "manual_override": {
+        "reason": "provisional_low_repeatability_0_1_2kg",
+        "included_at": "2026-10-19T13:15:43.462674+09:00",
+        "within_session_review_passed": false
+      }
+    },
+    "left_C09": {
+      "baseline_adc_at_capture": 16.45,
+      "reference_1kg_adc": 4881.4,
+      "reference_2kg_adc": 6158.4,
+      "delta_1kg_adc": 4864.95,
+      "delta_2kg_adc": 6141.95,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 4881.4,
+          "median_minus_baseline_adc": 4864.95,
+          "inliers": 8,
+          "inlier_fraction": 0.8,
+          "range_spread": 0.6223,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": false
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 6158.4,
+          "median_minus_baseline_adc": 6141.95,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.3267,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": false,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_131800/sensor_calibration_reviewed.json",
+      "status": "manual_override_unvalidated",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established",
+      "manual_override": {
+        "reason": "provisional_low_repeatability_0_1_2kg",
+        "included_at": "2026-10-19T13:25:11.622516+09:00",
+        "within_session_review_passed": false
+      }
+    },
+    "left_C10": {
+      "baseline_adc_at_capture": 22.3,
+      "reference_1kg_adc": 5323.12,
+      "reference_2kg_adc": 7879.33,
+      "delta_1kg_adc": 5300.82,
+      "delta_2kg_adc": 7857.03,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 5323.12,
+          "median_minus_baseline_adc": 5300.82,
+          "inliers": 9,
+          "inlier_fraction": 0.9,
+          "range_spread": 0.4229,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 7879.33,
+          "median_minus_baseline_adc": 7857.03,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.0957,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": true,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_132929/sensor_calibration_reviewed.json",
+      "status": "within_session_candidate",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established"
+    },
+    "left_C11": {
+      "baseline_adc_at_capture": 9.5,
+      "reference_1kg_adc": 9585.3,
+      "reference_2kg_adc": 10866.85,
+      "delta_1kg_adc": 9575.8,
+      "delta_2kg_adc": 10857.35,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 9585.3,
+          "median_minus_baseline_adc": 9575.8,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.1718,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 10866.85,
+          "median_minus_baseline_adc": 10857.35,
+          "inliers": 10,
+          "inlier_fraction": 1.0,
+          "range_spread": 0.1337,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": true
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": true,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261019_133821/sensor_calibration_reviewed.json",
+      "status": "within_session_candidate",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established"
+    },
+    "left_C01": {
+      "baseline_adc_at_capture": 214.85,
+      "reference_1kg_adc": 270.52,
+      "reference_2kg_adc": 1250.22,
+      "delta_1kg_adc": 55.67,
+      "delta_2kg_adc": 1035.37,
+      "quality_review": {
+        "one_kg": {
+          "count": 10,
+          "median_adc": 270.52,
+          "median_minus_baseline_adc": 55.67,
+          "inliers": 3,
+          "inlier_fraction": 0.3,
+          "range_spread": 2.6125,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": false
+        },
+        "two_kg": {
+          "count": 10,
+          "median_adc": 1250.22,
+          "median_minus_baseline_adc": 1035.38,
+          "inliers": 5,
+          "inlier_fraction": 0.5,
+          "range_spread": 1.3034,
+          "band_fraction": 0.2,
+          "minimum_fraction": 0.9,
+          "minimum_repeats": 10,
+          "passed_session_repeatability": false
+        },
+        "monotonic_0_1_2kg": true,
+        "candidate": false,
+        "caution": "Within-session candidate only; no cross-session accuracy validation"
+      },
+      "capture_file": "/home/chaeni/feetfit-api/pressure_calibration/sensor_correction_data/20261020_014359/sensor_calibration_reviewed.json",
+      "status": "manual_override_unvalidated",
+      "warning": "Cross-session force reproducibility and common inter-sensor scale not established",
+      "manual_override": {
+        "reason": "suspected_solder_contact_low_response_unvalidated",
+        "included_at": "2026-10-20T01:51:03.143663+09:00",
+        "within_session_review_passed": false
+      }
+    }
+  },
+  "updated_at": "2026-10-20T01:51:03.143770+09:00"
+}

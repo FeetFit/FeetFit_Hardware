@@ -1,0 +1,8 @@
+parameter,value
+foot,LEFT
+mux_channel,C01
+ads_channel,A1
+baseline,39.48148148148148
+reference_2kg,7432.611111111111
+sensitivity_range,7393.12962962963
+median_window,5

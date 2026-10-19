@@ -262,11 +262,12 @@ ARDUCAM_AUTO_EXPOSURE = int(
 )
 
 
-ARDUCAM_EXPOSURE = int(
-    os.getenv(
-        "ARDUCAM_EXPOSURE",
-        "200"
-    )
+LEFT_ARDUCAM_EXPOSURE = int(
+    os.getenv("LEFT_ARDUCAM_EXPOSURE", "500")
+)
+
+RIGHT_ARDUCAM_EXPOSURE = int(
+    os.getenv("RIGHT_ARDUCAM_EXPOSURE", "100")
 )
 
 
@@ -830,6 +831,11 @@ FSR_SAMPLE_INTERVAL_SECONDS = float(
         "0.010"
     )
 )
+
+# 5-point temporal median smoothing for each channel read.
+# Default 1 preserves production behavior until explicitly enabled.
+FSR_MEDIAN_WINDOW = int(os.getenv("FSR_MEDIAN_WINDOW", "1"))
+
 
 
 # =========================================================

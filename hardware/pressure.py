@@ -1,5 +1,9 @@
 import time
+import os
+import statistics
 from threading import Lock
+
+from hardware.sensor_calibration import load_profile, correct_sensitivity, hardware_signature
 
 import board
 import busio
@@ -45,6 +49,7 @@ from config import (
     FSR_DISCARD_INTERVAL_SECONDS,
     FSR_VALID_READS,
     FSR_SAMPLE_INTERVAL_SECONDS,
+    FSR_MEDIAN_WINDOW,
 
     # FSR circuit
     FSR_FIXED_RESISTOR_OHMS,
@@ -222,6 +227,11 @@ SAMPLE_INTERVAL = (
     FSR_SAMPLE_INTERVAL_SECONDS
 )
 
+MEDIAN_WINDOW = FSR_MEDIAN_WINDOW
+if MEDIAN_WINDOW < 1 or MEDIAN_WINDOW % 2 == 0:
+    raise ValueError("FSR_MEDIAN_WINDOW must be an odd integer >= 1")
+
+
 
 # =========================================================
 # Validation
@@ -373,6 +383,35 @@ right_adc = AnalogIn(
     ],
 )
 
+# =========================================================
+# Optional sensor calibration profile
+# legacy   : original .env baseline, original AI ADC scale
+# baseline : measured 24-channel baseline, original AI ADC scale
+# full     : measured baseline + checked piecewise sensitivity correction
+#            (changes AI input scale: test with AI service first)
+# =========================================================
+CALIBRATION_MODE = os.getenv("FSR_CALIBRATION_MODE", "legacy").strip().lower()
+CALIBRATION_FILE = os.getenv("FSR_CALIBRATION_FILE", "").strip()
+CALIBRATION_SIGNATURE = hardware_signature(
+    left_en=EN_LEFT, right_en=EN_RIGHT,
+    left_ads=ADS1115_LEFT_CHANNEL, right_ads=ADS1115_RIGHT_CHANNEL,
+    gain=ADS1115_GAIN, data_rate=ADS1115_DATA_RATE,
+    first_channel=FIRST_CHANNEL, last_channel=LAST_CHANNEL,
+    channel_count=CHANNEL_COUNT, median_window=MEDIAN_WINDOW,
+    valid_reads=VALID_READS,
+    mux_select_pins=SELECT_PINS,
+    active_low=FSR_MUX_ENABLE_ACTIVE_LOW,
+    fixed_resistor_ohms=FSR_FIXED_RESISTOR_OHMS,
+)
+CALIBRATION_PROFILE = load_profile(
+    CALIBRATION_FILE, CALIBRATION_MODE, CALIBRATION_SIGNATURE
+)
+if CALIBRATION_PROFILE is not None:
+    LEFT_BASELINE = CALIBRATION_PROFILE["feet"]["left"]["baseline"]
+    RIGHT_BASELINE = CALIBRATION_PROFILE["feet"]["right"]["baseline"]
+    print(f"[PRESSURE CALIBRATION] mode={CALIBRATION_MODE} file={CALIBRATION_FILE}", flush=True)
+
+
 
 # =========================================================
 # MUX Disable
@@ -489,14 +528,17 @@ def read_adc(
         )
 
 
-    # -----------------------------------------------------
-    # 평균
-    # -----------------------------------------------------
-
-    return float(
-        sum(values)
-        / len(values)
-    )
+    # Five-point temporal median filtering (offline-compatible centered window).
+    # The original average is retained for MEDIAN_WINDOW=1.
+    if MEDIAN_WINDOW == 1:
+        filtered = values
+    else:
+        half = MEDIAN_WINDOW // 2
+        filtered = [
+            statistics.median(values[max(0, i-half):min(len(values), i+half+1)])
+            for i in range(len(values))
+        ]
+    return float(statistics.mean(filtered))
 
 
 # =========================================================
@@ -1135,6 +1177,18 @@ def measure_pressure() -> dict:
                 )
             )
 
+
+            # =================================================
+            # Sensitivity correction, AFTER baseline, BEFORE relative conversion.
+            # Full mode intentionally changes the payload numbers sent to AI.
+            # =================================================
+            if CALIBRATION_MODE == "full" and not PRESSURE_FIXED_INPUT:
+                left_corrected = correct_sensitivity(
+                    left_corrected, "left", CALIBRATION_PROFILE
+                )
+                right_corrected = correct_sensitivity(
+                    right_corrected, "right", CALIBRATION_PROFILE
+                )
 
             # =================================================
             # Relative Pressure
